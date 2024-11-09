@@ -1,0 +1,84 @@
+{
+    "wall": {
+        "concrete": {
+            "wall": {
+                "concrete": "Wall_Shoe_Anchor_Bolts",
+                "metal": "Wall_Shoe_Anchor_Bolts"
+            },
+            "slab": {
+                "concrete": "none",
+                "metal": "none"
+            },
+            "beam": {
+                "concrete": ["PC_Beam_Shoe", "COPRA_Anchoring_Coupler", "PSB_Headed_Anchors"],
+                "metal": ["PC_Beam_Shoe", "COPRA_Anchoring_Coupler", "PSB_Headed_Anchors"]
+            }
+        },
+        "metal": {
+            "wall": {
+                "concrete": "Wall_Shoe_Anchor_Bolts",
+                "metal": "Wall_Shoe_Anchor_Bolts"
+            },
+            "slab": {
+                "concrete": "none",
+                "metal": "none"
+            },
+            "beam": {
+                "concrete": ["PC_Beam_Shoe", "COPRA_Anchoring_Coupler", "PSB_Headed_Anchors"],
+                "metal": ["PC_Beam_Shoe", "COPRA_Anchoring_Coupler", "PSB_Headed_Anchors"]
+            }
+        }
+    },
+    "slab": {
+        "concrete": {
+            "column": {
+                "concrete": "none",
+                "precast": "PSB_Punching_Reinforcement"
+            },
+            "slab": {
+                "precast": ["TERAJOINT_Free_Movement_Joint", "SLADEX_Balcony_Slab_Connector", "PS"],
+                "cast": "none"
+            }
+        },
+        "metal": {
+            "column": {
+                "concrete": "none",
+                "metal": "none"
+            },
+            "slab": {
+                "concrete": "none",
+                "metal": "none"
+            }
+        }
+    },
+    "column": {
+        "concrete": {
+            "column": {
+                "concrete": "PSB_Punching_Reinforcement",
+                "precast": "PSB_Punching_Reinforcement"
+            },
+            "beam": {
+                "concrete": ["PC_Beam_Shoe", "COPRA_Anchoring_Coupler", "BECO_Beam_Shoe"],
+                "metal": ["WELDA_Anchor_Plate", "THRELDA_Anchor_Plate"]
+            }
+        },
+        "metal": {
+            "column": {
+                "concrete": "none",
+                "metal": "none"
+            },
+            "beam": {
+                "concrete": ["WELDA_Anchor_Plate", "THRELDA_Anchor_Plate"],
+                "metal": "none"
+            }
+        }
+    },
+    "parapet": {
+        "concrete": {
+            "any": "PIFOREX_Balcony_Parapet_Connector"
+        },
+        "metal": {
+            "any": "PIFOREX_Balcony_Parapet_Connector"
+        }
+    }
+}
