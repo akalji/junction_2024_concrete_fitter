@@ -90,8 +90,8 @@ class Chatbot:
 
 # Example usage
 chatbot = Chatbot()
-print("ANSWER:", chatbot.get_response("Hi! My name is Alex"))
-print("ANSWER:", chatbot.get_response("What connectors can we use for beam to column connection?"))
+#print("ANSWER:", chatbot.get_response("Hi! My name is Alex"))
+#print("ANSWER:", chatbot.get_response("What connectors can we use for beam to column connection?"))
 
 while True:
     print("ANSWER:", chatbot.get_response(input("Input your question here: ")))
