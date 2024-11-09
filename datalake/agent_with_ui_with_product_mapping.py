@@ -5,7 +5,7 @@ import meilisearch
 from typing import List, Dict
 from dotenv import load_dotenv, find_dotenv
 from openai import OpenAI
-
+import gradio as gr
 
 class Chatbot:
     def __init__(self):
@@ -110,12 +110,22 @@ class Chatbot:
         
         self.add_message("assistant", assistant_message_content)
         return assistant_message_content
+    
+    
 
+msg_history = []
+def respond(user_input, chatbot_interface):
+    response = chatbot.get_response(user_input)   
+    req_res_tuple = (user_input, response) 
+    msg_history.append(req_res_tuple)
+    return "", msg_history
 
-# Example usage
-chatbot = Chatbot()
-#print("ANSWER:", chatbot.get_response("Hi! My name is Alex"))
-#print("ANSWER:", chatbot.get_response("What connectors can we use for beam to column connection?"))
+with gr.Blocks() as demo:
+    chatbot_interface = gr.Chatbot()
+    msg = gr.Textbox()
+    clear = gr.ClearButton([msg, chatbot_interface])
+    msg.submit(respond, [msg, chatbot_interface], [msg, chatbot_interface])
 
-while True:
-    print("ANSWER:", chatbot.get_response(input("Input your question here: ")))
+if __name__ == "__main__":
+    chatbot = Chatbot()
+    demo.launch()
