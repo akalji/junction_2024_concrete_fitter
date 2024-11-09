@@ -1,0 +1,4 @@
+ifcopenshell==0.8.0
+mathutils==3.3.0
+bpy==4.2.0
+shapely
