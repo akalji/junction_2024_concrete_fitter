@@ -9,6 +9,8 @@ class IFCAnalyser:
         self.ifc_file = ifcopenshell.open(ifc_file_path)
         self.element_types = element_types
         self.threshold = threshold
+        self.collision_pairs = self.find_collisions()
+        self.collided_elements = self.get_collided_elements()
 
     def get_elements_by_type(self):
         """Получает все элементы указанных IFC-типов."""
@@ -62,4 +64,13 @@ class IFCAnalyser:
                     if bbox2:
                         if self.check_collision_or_proximity(bbox1, bbox2):
                             collision_pairs.append((element1.id(), element2.id()))
+
         return collision_pairs
+
+    def get_collided_elements(self):
+        collided_elements_set = set()
+        for pair in self.collision_pairs:
+            element1, element2 = pair
+            collided_elements_set.add(str(element1))
+            collided_elements_set.add(str(element2))
+        return collided_elements_set
