@@ -1,7 +1,7 @@
 import json
 
 class ProductMapper:
-    def __init__(self, json_file="analyser/product_mapping_schema.json"):
+    def __init__(self, json_file="C:/junction_2024_concrete_fitter/analyser/product_mapping_schema.json"):
         with open(json_file, "r") as file:
             self.product_mapping_schema = json.load(file)
 
