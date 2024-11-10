@@ -45,10 +45,7 @@ class Chatbot:
             "instance2": None,
             "material2": None,
             "products": None
-            }
-
-        
-        
+        }
 
     def meilisearch_products_info(self, search_query):
         search_result = self.meili_client.index('products').search(search_query)
@@ -58,20 +55,18 @@ class Chatbot:
         self.message_history.append({"role": role, "content": content})
 
     def check_if_user_selected_something(self):
-        with open("datalake/current_user_selection.json", "r") as file:
-            user_selected_objects = json.load(file)
-        if user_selected_objects != self.user_selected_objects:
-            self.user_selected_objects = user_selected_objects
-            self.add_message(role="system", content=f"At this moment the user is looking at a connection of {self.user_selected_objects["instance1"]} made of {self.user_selected_objects["material1"]} and {self.user_selected_objects["instance2"]} made of {self.user_selected_objects["material2"]}. \
-                                Possible connector products for this type of connection are {self.user_selected_objects["products"]} \
-                                Just keep that information for some extra context of what the user may be interested in. User still may ask questions that are about anything else."
-                                )
-        
+        # with open("datalake/current_user_selection.json", "r") as file:
+        #     user_selected_objects = json.load(file)
+        self.add_message(role="system",
+                         content=f'At this moment the user is looking at a connection of {self.user_selected_objects["instance1"]} made of {self.user_selected_objects["material1"]} and {self.user_selected_objects["instance2"]} made of {self.user_selected_objects["material2"]}. \
+                            Possible connector products for this type of connection are {self.user_selected_objects["products"]} \
+                            Just keep that information for some extra context of what the user may be interested in. User still may ask questions that are about anything else.'
+                         )
 
     def get_response(self, user_message: str) -> str:
         self.add_message("user", user_message)
         print("QUESTION:", user_message)
-        
+
         self.check_if_user_selected_something()
 
         # Call the chat completion API
@@ -80,7 +75,7 @@ class Chatbot:
             messages=self.message_history,
             tools=self.tools,
         )
-        
+
         # Check if a tool call was requested by the model
         if completion.choices[0].message.tool_calls:
             tool_call = completion.choices[0].message.tool_calls[0]
@@ -90,32 +85,32 @@ class Chatbot:
             arguments_dict = json.loads(arguments)
             search_query = arguments_dict.get("search_query")
             search_result = self.meilisearch_products_info(search_query)
-            
+
             # Prepare the function call result message
             function_call_result_message = {
                 "role": "tool",
                 "content": json.dumps(search_result),
                 "tool_call_id": tool_call.id
             }
-            
+
             # Send the tool result back to the model
             completion_with_result = self.client.chat.completions.create(
                 model="gpt-4o",
                 messages=self.message_history + [completion.choices[0].message, function_call_result_message]
             )
-            
+
             assistant_message_content = completion_with_result.choices[0].message.content
         else:
             assistant_message_content = completion.choices[0].message.content  # No function call; just respond directly
-        
+
         self.add_message("assistant", assistant_message_content)
         return assistant_message_content
 
 
 # Example usage
 chatbot = Chatbot()
-#print("ANSWER:", chatbot.get_response("Hi! My name is Alex"))
-#print("ANSWER:", chatbot.get_response("What connectors can we use for beam to column connection?"))
+# print("ANSWER:", chatbot.get_response("Hi! My name is Alex"))
+# print("ANSWER:", chatbot.get_response("What connectors can we use for beam to column connection?"))
 
 while True:
     print("ANSWER:", chatbot.get_response(input("Input your question here: ")))
