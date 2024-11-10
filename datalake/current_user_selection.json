@@ -1,7 +1,7 @@
 {
-  "instance1": null,
-  "material1": null,
-  "instance2": null,
-  "material2": null,
-  "products": null
+  "instance1": "column",
+  "material1": "metal",
+  "instance2": "wall",
+  "material2": "concrete",
+  "products": ["WELDA_Anchor_Plate", "THRELDA_Anchor_Plate"]
 }

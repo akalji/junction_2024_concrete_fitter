@@ -62,9 +62,9 @@ class Chatbot:
             user_selected_objects = json.load(file)
         if user_selected_objects != self.user_selected_objects:
             self.user_selected_objects = user_selected_objects
-            self.add_message(role="system", content=f"At this moment the user is looking at a connection of {self.user_selected_objects["instance1"]} made of {self.user_selected_objects["material1"]} and {self.user_selected_objects["instance2"]} made of {self.user_selected_objects["material2"]}. \
+            self.add_message(role="system", content=f'At this moment the user is looking at a connection of {self.user_selected_objects["instance1"]} made of {self.user_selected_objects["material1"]} and {self.user_selected_objects["instance2"]} made of {self.user_selected_objects["material2"]}. \
                                 Possible connector products for this type of connection are {self.user_selected_objects["products"]} \
-                                Just keep that information for some extra context of what the user may be interested in. User still may ask questions that are about anything else."
+                                Just keep that information for some extra context of what the user may be interested in. User still may ask questions that are about anything else.'
                                 )
         
 
@@ -80,7 +80,7 @@ class Chatbot:
             messages=self.message_history,
             tools=self.tools,
         )
-        
+        print(completion.choices[0].message)
         # Check if a tool call was requested by the model
         if completion.choices[0].message.tool_calls:
             tool_call = completion.choices[0].message.tool_calls[0]
