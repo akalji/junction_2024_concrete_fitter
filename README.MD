@@ -6,7 +6,7 @@
 ![OpenAI Badge](https://img.shields.io/badge/OpenAI-%2300A9E0?style=flat&logo=openai&logoColor=white)
 
 ## 🚀 Overview
-[Peikko](https://www.peikko.com) sells industrial connections for construction, such as beam-to-column connectors, and faces a common problem: 
+[**Peikko**](https://www.peikko.com) sells industrial connections for construction, such as beam-to-column connectors, and faces a common problem: 
 - Customers provide **IFC files** containing complex building information.
 - Choosing the right **Peikko products** requires expert analysis.
 - **Sales engineers** invest time in recommendations, often without immediate sales.
@@ -38,7 +38,7 @@ We built a **Blender-based tool** that:\
   - Ask about specific product details.
   - Understand why a recommendation was made.
   - Get installation or compliance guidance.
-- The chatbot uses **MeiliSearch** based knowledge base to provide **context-aware responses**.
+- The chatbot uses [**MeiliSearch**](https://www.meilisearch.com/) based knowledge base to provide **context-aware responses**.
   
 ![Assistant](./assets/assistant.gif)
 
@@ -58,4 +58,4 @@ This project was developed as part of **Junction 2024 Hackathon**.
 
 ---
 ### 📩 Contact
-For inquiries, feel free to reach out or check Peikko’s official resources.
+For inquiries, feel free to [reach out](https://www.linkedin.com/in/aleksandrshishkov) or check [Peikko’s official resources](https://www.peikko.com).
