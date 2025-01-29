@@ -6,7 +6,7 @@
 ![OpenAI Badge](https://img.shields.io/badge/OpenAI-%2300A9E0?style=flat&logo=openai&logoColor=white)
 
 ## 🚀 Overview
-[Peikko](https://www.peikko.com), sells industrial connections for construction (e.g. beam to column connectors), faces a common problem: 
+[Peikko](https://www.peikko.com) sells industrial connections for construction, such as beam-to-column connectors, and faces a common problem: 
 - Customers provide **IFC files** containing complex building information.
 - Choosing the right **Peikko products** requires expert analysis.
 - **Sales engineers** invest time in recommendations, often without immediate sales.
@@ -26,13 +26,12 @@ We built a **Blender-based tool** that:\
 - The system **analyzes structural elements** to detect areas where Peikko connections are necessary.
 - Key points are **highlighted** for the customer to explore further.
 
-📌 _Placeholder for 3D model screenshot_
+![IFC](./assets/highlights.jpg)
 
 ### 2️⃣ **AI-Powered Product Recommendation**
 - The user **clicks on a highlighted area**, and the system **suggests suitable Peikko products**.
 - The recommendation is based on **building specifics, Peikko’s product catalog, and industrial manuals**.
 
-📌 _Placeholder for recommendation screenshot_
 
 ### 3️⃣ **AI Chatbot Assistance**
 - The customer can interact with a **smart AI assistant** to:
@@ -40,14 +39,14 @@ We built a **Blender-based tool** that:\
   - Understand why a recommendation was made.
   - Get installation or compliance guidance.
 - The chatbot uses **MeiliSearch** based knowledge base to provide **context-aware responses**.
-
-📌 _Placeholder for chatbot screenshot_
+  
+![Assistant](./assets/assistant.gif)
 
 ## 🤝 Team & Acknowledgments
 This project was developed as part of **Junction 2024 Hackathon**.
 
 **Team Members:**
-- **Aleksandr Shishkov** – AI & Knowledge Base Development  <a href="https://linkedin.com/in/www.linkedin.com/in/aleksandrshishkov" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="www.linkedin.com/in/aleksandrshishkov" height="20" width="30" /></a>
+- **Aleksandr Shishkov** – AI & Knowledge Base Development  <a href="https://www.linkedin.com/in/aleksandrshishkov" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="www.linkedin.com/in/aleksandrshishkov" height="20" width="30" /></a>
 
 - **Nikolai Tikhonov** - Team Lead & Project Manager <a href="https://www.linkedin.com/in/ntikhonov/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="www.linkedin.com/in/aleksandrshishkov" height="20" width="30" /></a>
 
