@@ -6,6 +6,7 @@
 ![OpenAI Badge](https://img.shields.io/badge/OpenAI-%2300A9E0?style=flat&logo=openai&logoColor=white)
 ![Python Badge](https://img.shields.io/badge/Python-%233776AB?style=flat&logo=python&logoColor=white)
 
+>This is a proof-of-concept version of the product developed for Peikko company during Junction2024 Hackathon.
 
 ## 🚀 Overview
 [**Peikko**](https://www.peikko.com) sells industrial connections for construction, such as beam-to-column connectors, and faces a common problem: 
