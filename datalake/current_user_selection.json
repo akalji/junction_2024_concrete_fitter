@@ -1,7 +1,7 @@
 {
-  "instance1": "column",
-  "material1": "metal",
-  "instance2": "wall",
-  "material2": "concrete",
-  "products": ["WELDA_Anchor_Plate", "THRELDA_Anchor_Plate"]
+  "instance1": "wall",
+  "material1": "concrete",
+  "instance2": "beam",
+  "material2": "metal",
+  "products": ["PC_Beam_Shoe", "COPRA_Anchoring_Coupler", "PSB_Headed_Anchors"]
 }
