@@ -4,6 +4,8 @@
 ![Blender Badge](https://img.shields.io/badge/Blender-%23F5792A?style=flat&logo=blender&logoColor=white) 
 ![MeiliSearch Badge](https://img.shields.io/badge/MeiliSearch-%23A2F4C6?style=flat&logo=meilisearch&logoColor=black) 
 ![OpenAI Badge](https://img.shields.io/badge/OpenAI-%2300A9E0?style=flat&logo=openai&logoColor=white)
+![Python Badge](https://img.shields.io/badge/Python-%233776AB?style=flat&logo=python&logoColor=white)
+
 
 ## 🚀 Overview
 [**Peikko**](https://www.peikko.com) sells industrial connections for construction, such as beam-to-column connectors, and faces a common problem: 
